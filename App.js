@@ -48,7 +48,7 @@ export default class App extends Component {
       content = (
         <Forecast
           main={this.state.forecast.main}
-          description={this.forecast.description}
+          description={this.state.forecast.description}
           temp={this.state.forecast.temp}
         />
       );
