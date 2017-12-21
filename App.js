@@ -96,5 +96,6 @@ const styles = StyleSheet.create({
     height: 40,
     padding: 2,
     width: 100,
+    textAlign: 'center',
   }
 });
