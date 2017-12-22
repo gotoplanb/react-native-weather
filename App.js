@@ -6,6 +6,7 @@
 
 import React, { Component } from 'react';
 import {
+  Image,
   Platform,
   StyleSheet,
   Text,
@@ -57,12 +58,17 @@ export default class App extends Component {
 
     return (
       <View style={styles.container}>
+        <Image
+          source={require('./flowers.png')}
+          resizeMode='cover'
+          style={styles.backdrop}
+        />
         <Text style={styles.welcome}>
           You input {this.state.zip}.
         </Text>
         {content}
         <TextInput 
-          style= {styles.input}
+          style={styles.input}
           onSubmitEditing={this._handleTextChange}
         />
         <Text style={styles.instructions}>
@@ -97,5 +103,9 @@ const styles = StyleSheet.create({
     padding: 2,
     width: 100,
     textAlign: 'center',
+  },
+  backdrop: {
+    flex: 1,
+    flexDirection: 'column',
   }
 });
